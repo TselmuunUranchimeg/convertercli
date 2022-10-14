@@ -1,5 +1,5 @@
 {
-    "name": "convertercli",
+    "name": "converter",
     "version": "1.0.0",
     "description": "CLI tool to download YouTube video audio",
     "main": "./dist/main.js",
@@ -28,6 +28,6 @@
         "typescript": "^4.8.4"
     },
     "bin": {
-        "convertercli": "dist/main.js"
+        "converter": "dist/main.js"
     }
 }
