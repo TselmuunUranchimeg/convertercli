@@ -7,7 +7,7 @@ import {
     createReadStream,
     createWriteStream,
     existsSync,
-    mkdirSync,
+    mkdirSync
 } from "fs";
 import { parse } from "url";
 import { unlink } from "fs/promises";
@@ -46,6 +46,10 @@ const getThumbnailLocation = (url: string, title: string): Promise<string> => {
 };
 
 const getAudio = async (url: string, out: string) => {
+    const dlPath = join(__dirname, "../../dl");
+    if (!existsSync(dlPath)) {
+        mkdirSync(dlPath);
+    }
     const videoId = parse(url, true).query.v as string | undefined;
     if (!videoId) {
         console.log(chalk.red.bold("This is not a valid video link!"));

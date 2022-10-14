@@ -1,13 +1,12 @@
 {
     "name": "customconverter",
-    "version": "1.0.1",
+    "version": "1.0.4",
     "description": "CLI tool to download YouTube video audio",
     "main": "./dist/main.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "tsc"
     },
-    "files": ["dl"],
     "keywords": [],
     "author": "Tselmuun",
     "license": "ISC",
