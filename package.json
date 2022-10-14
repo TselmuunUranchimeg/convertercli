@@ -1,5 +1,5 @@
 {
-    "name": "converter",
+    "name": "customconverter",
     "version": "1.0.0",
     "description": "CLI tool to download YouTube video audio",
     "main": "./dist/main.js",
