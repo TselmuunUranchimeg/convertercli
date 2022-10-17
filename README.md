@@ -4,13 +4,11 @@ This is a CLI tool written in Node.js that downloads audio of YouTube videos, an
 
 # Usage
 
-Usage: converter [command] [options]
+converter [options]
 
 a tool to convert YouTube videos and save them in specified location
 
 Options:
-  -h, --help            display help for command
-
-Commands:
-  url [options] <link>  get video and convert to audio file
-  help [command]        display help for command
+  -u, --url <link>       link to the video
+  -o, --outPut <string>  location to save audio (default: "C:\\Users\\{username}\\Music")
+  -h, --help             display help for command

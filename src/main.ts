@@ -8,15 +8,14 @@ const program = new Command();
 program
     .name("converter")
     .description("a tool to convert YouTube videos and save them in specified location")
-    .usage("[command] [options]");
+    .usage("[options]")
+    .requiredOption("-u, --url <link>", "link to the video")
+    .option("-o, --outPut <string>", "location to save audio", defaultPath);
 
-program
-    .command("url")
-    .usage("<link> [options]")
-    .description("get video in specified link and convert it to a mp3 file")
-    .summary("get video and convert to audio file")
-    .argument("<link>", "url of the youtube video")
-    .option("-o, --outPut <string>", "location to save audio", defaultPath)
-    .action(async (url, options) => {await getAudio(url, options.outPut)});
+program.parse(process.argv);
 
-program.parse();
+const options = program.opts();
+
+(async () => {
+    await getAudio(options.url, options.outPut);
+})();
