@@ -1,6 +1,6 @@
 {
     "name": "customconverter",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "CLI tool to download YouTube video audio",
     "main": "./dist/main.js",
     "scripts": {
@@ -29,5 +29,10 @@
     },
     "bin": {
         "converter": "dist/main.js"
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TselmuunUranchimeg/convertercli.git"
+    },
+    "homepage": "https://github.com/TselmuunUranchimeg/convertercli"
 }
