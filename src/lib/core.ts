@@ -20,7 +20,7 @@ import sharp from "sharp";
 import chalk from "chalk";
 const ID3Writer = require("browser-id3-writer");
 
-const defaultPath = join("C:", "/Users", `/${userInfo().username}`, "/Music");
+const defaultPath = join("C:", "/Users", `/${userInfo().username}`, "/Downloads");
 
 const getThumbnailLocation = (url: string, title: string): Promise<string> => {
     return new Promise<string>(async (resolve, _) => {
